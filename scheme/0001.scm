@@ -11,7 +11,7 @@
 (use extras) ; For print to stdout in Chicken Scheme
 (use srfi-1) ; For filter
 
-(define (is-multiple? value)
+(define (multiple? value)
   (cond ((or (= (modulo value 3) 0)
 	     (= (modulo value 5) 0))
 	 #t)
@@ -23,11 +23,11 @@
       (cons n (integer-list (- n 1)))))
 
 (define (get-multiples bound)
-  (filter is-multiple? (integer-list bound)))
+  (filter multiple? (integer-list bound)))
 
-(define (sum-of-multiples lst)
+(define (sum lst)
   (foldl + 0 lst))
 
 (format #t 
 	"The sum of multiples is ~A.\n" 
-	(sum-of-multiples (get-multiples 999)))
+	(sum (get-multiples 999)))
