@@ -2,4 +2,5 @@
 *.swo
 *.hi
 *.o
+*.pyc
 bin
