@@ -1,0 +1,15 @@
+Thought it would be nice to have a sort of personal Rosetta Code of various
+languages I work with/am interested in.  Project Euler gives a nice structure
+to this.
+
+If you're looking for performance oriented solutions this is the *wrong* place
+to look.  The goal here is to have efficient solutions preferably done in
+the most idiomatic way for a given language, where efficient is taken in the
+sense of being efficient for human consumption.  As far as the maths go, this
+means I won't bother to find a cleverer solution if a given one halts under
+a minute.
+
+If you can suggest a more idiomatic solution I would be glad to hear from you.
+Especially for Haskell and Scheme (and Clojure, I hope soon).  So feel free to
+comment on the code, pull request, or whatever.  
+
