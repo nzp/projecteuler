@@ -11,37 +11,17 @@
 
 #define UPPER_BOUND 1000
 
-int *
-get_multiples()
-{
-	/* Has to be static so that the caller can access it.
-	 * Another way is for the caller to declare the array, or to
-	 * malloc it.  This is the simplest for this purpose.
-	 */
-	static int multiples[UPPER_BOUND - 1];
-	int c;
-	for (c = 0; c < UPPER_BOUND - 1; c++) {
-		multiples[c] = 0;
-	}
 
+int
+sum_of_multiples()
+{
+	int sum = 0;
 	int i = 1;
 	int j = 0;
 	for (j = 0; j < UPPER_BOUND - 1; j++, i++) {
 		if ((i % 3 == 0) || (i % 5 == 0)) {
-			multiples[j] = i;
+			sum += i;
 		}
-	}
-
-	return multiples;
-}
-
-int
-sum_of_multiples(int *multiples)
-{
-	int i;
-	int sum = 0;
-	for (i = 0; i < UPPER_BOUND - 1; i++) {
-		sum += multiples[i];
 	}
 
 	return sum;
@@ -50,10 +30,7 @@ sum_of_multiples(int *multiples)
 int
 main(int argc, char *argv[])
 {
-	int *mults = get_multiples();
-	int sum = sum_of_multiples(mults);
-
-	printf("The sum of multiples is %d.\n", sum);
+	printf("The sum of multiples is %d.\n", sum_of_multiples());
 
 	return 0;
 }
