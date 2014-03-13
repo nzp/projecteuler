@@ -20,10 +20,6 @@ def prime_sieve(limit):
                 numlist[i] = False
 
 
-# In general, if sqrt of n is prime and if n is divisible by that number
-# that would be the solution, but it's not the case here so it can't be
-# shortcircuited with that.
-
 n = 600851475143  
 factor_limit = math.ceil(math.sqrt(n))
 primes = prime_sieve(factor_limit)
