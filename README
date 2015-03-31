@@ -13,3 +13,10 @@ If you can suggest a more idiomatic solution I would be glad to hear from you.
 Especially for Haskell and Scheme (and Clojure, I hope soon).  So feel free to
 comment on the code, pull request, or whatever.  
 
+
+Problem specific notes
+------------------------
+
+* Problem 5 does not need any programming, it's easily solvable with pen,
+  paper, and a calculator.
+
